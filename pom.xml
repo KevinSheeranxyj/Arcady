@@ -7,6 +7,7 @@
     <groupId>com.skyscraper</groupId>
     <artifactId>Arcady</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -41,7 +42,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.mycompany.app.App</mainClass>
+                            <mainClass>com.skyscraper.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
