@@ -12,14 +12,19 @@ pipeline {
             }
       }
       stage('Test') {
-            steps {
+          steps {
                 sh 'mvn test'
-            }
-            post {
+          }
+          post {
                 always {
                     junit 'target/surefire-report/*.xml'
                 }
-            }
+          }
+      }
+      stage('Deliver') {
+          steps {
+              sh './jenkins/scripts/deliver.sh'
+          }
       }
     }
 }
